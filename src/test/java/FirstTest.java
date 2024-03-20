@@ -19,5 +19,4 @@ public class FirstTest extends WebDriverSettings{
         Assert.assertEquals("Mail.ru: почта, поиск, новости, прогноз погоды, гороскоп, программа передач", driver.getTitle()); // Проверка соответствия значения и title
     }
 
-
 }
