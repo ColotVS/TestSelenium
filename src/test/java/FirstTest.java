@@ -8,8 +8,6 @@ public class FirstTest extends WebDriverSettings{
 
         driver.get("https://habr.com/ru/feed/");    // открывает страницу
 
-
-
         Assert.assertEquals("Публикации / Моя лента / Хабр", driver.getTitle()); // Проверка соответствия значения и title
     }
 
