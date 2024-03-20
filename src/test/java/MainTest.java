@@ -7,12 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class MainTest {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwjd8tnYxfqEAxWaFBAIHXzKATsQPAgJ");
+        driver.get("https://habr.com/ru/feed/");
 
-        WebElement input = driver.findElement(By.xpath("//textarea[@class='gLFyf']"));
+        WebElement input = driver.findElement(By.xpath(""));
         //Поиск xPath по относительному пути, через атрибут.
         input.click();
-        input = driver.findElement(By.xpath("//a [contains(text(),'Картинки')]"));
+        input = driver.findElement(By.xpath(""));
         //Поиск xPath по блокам содержащим определённый текст
         input.click();
     }
