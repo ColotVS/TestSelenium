@@ -9,8 +9,7 @@ public class FirstTest {
 
         driver.get("https://habr.com/ru/feed/");    // открывает страницу
 
-        String title = driver.getTitle(); //Получить title страницы
-        Assert.assertEquals("Публикации / Моя лента / Хабр", title); // Проверка соответствия значения и переменной
+        Assert.assertEquals("Публикации / Моя лента / Хабр", driver.getTitle()); // Проверка соответствия значения и title
 
         driver.quit();  //закрывает страницу
     }
