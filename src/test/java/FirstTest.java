@@ -14,6 +14,12 @@ public class FirstTest extends WebDriverSettings{
 
         WebElement input = driver.findElement(By.xpath("//button [@class='tm-header-user-menu__login btn btn_solid btn_small']")); //Находим кнопку войти на странице habr.com
         input.click();  //Нажимаем на элемент расположены по адресу xpath
+
+        //WebElement input = driver.findElement(By.cssSelector());  поиск элемента по cssSelector
+
+        //WebElement input = driver.findElement(By.className());    поиск элемента по className
+
+        //WebElement input = driver.findElement(By.id());           поиск элемента по id
     }
 
     @Test
