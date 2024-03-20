@@ -6,6 +6,10 @@ public class FirstTest {
     public void firstTest(){
         ChromeDriver driver = new ChromeDriver();
 
-        driver.get("https://habr.com/ru/feed/"); // открывает страницу
+        driver.get("https://habr.com/ru/feed/");    // открывает страницу
+
+        String title = driver.getTitle(); //Получить title страницы
+
+        driver.quit();  //закрывает страницу
     }
 }
