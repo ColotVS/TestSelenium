@@ -14,6 +14,11 @@ public class WebDriverSettings {
 
     @After                      //Выполняется для всех тестов после их завершения
     public void close(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.quit();  //закрывает страницу
         System.out.println("Stop test:" + i);
     }
