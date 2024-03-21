@@ -47,7 +47,7 @@ public class FirstTest extends WebDriverSettings{
         String cssValue = input.getCssValue("display"); // проверка одного из значения стиля страницы
         System.out.println(cssValue);
 
-        input.click();  //Нажимаем на элемент расположены по адресу xpath
+        input.click();  //Нажимаем на элемент расположенный по адресу xpath
 
 
     }
