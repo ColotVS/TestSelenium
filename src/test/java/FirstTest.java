@@ -56,7 +56,7 @@ public class FirstTest extends WebDriverSettings{
 
         WebElement input = driver.findElement(By.xpath("//a[@href='/novoaltaysk/bytovaya_elektronika']"));
 
-        String parameter = input.getAttribute("textContent"); //Получение свойств атрибута (Properties)
+        String parameter = input.getAttribute("textContent"); //Получение свойств элемента (Properties)
         System.out.println(parameter);  //Выводим на экран полученное свойство
 
         input.click();  //Нажимаем на элемент расположены по адресу xpath
