@@ -1,7 +1,6 @@
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.time.Duration;
 
 public class WebDriverSettings {
     public ChromeDriver driver;
@@ -9,7 +8,6 @@ public class WebDriverSettings {
     @Before                     //Выполняется для всех тестов перед их запуском
     public void startTest(){
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // При выполнении findElement будет ожидание в 5 секунд
         i++;
         System.out.println("Start test:" + i);
     }
