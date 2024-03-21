@@ -24,7 +24,7 @@ public class FirstTest extends WebDriverSettings{
         input = (new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Поиск']"))));//Ожидаем появления элемента на странице, расположенного по адресу xpath.
 
-        input.sendKeys("Автоматизация тестирования на Java", Keys.ENTER);
+        input.sendKeys("Автоматизация тестирования на Java", Keys.ENTER); //Вводим текст в поле, после ввода нажимаем Enter
 
         //WebElement input = driver.findElement(By.cssSelector());      поиск элемента по cssSelector
 
