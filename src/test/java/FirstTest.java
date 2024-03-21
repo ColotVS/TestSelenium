@@ -48,13 +48,12 @@ public class FirstTest extends WebDriverSettings{
 
         Assert.assertEquals("Mail.ru: почта, поиск, новости, прогноз погоды, гороскоп, программа передач", driver.getTitle()); // Проверка соответствия значения и title
 
-        WebElement input = driver.findElement(By.xpath("//button[@class='resplash-btn resplash-btn_primary resplash-btn_mailbox-big qopmkfo__b85yax']")); //Находим кнопку войти на странице mail.ru
+        WebElement input = driver.findElement(By.xpath("//button[@class='ph-login svelte-1au561b']")); //Находим кнопку войти на странице mail.ru
 
         String cssValue = input.getCssValue("display"); // проверка одного из значения стиля страницы
         System.out.println(cssValue);
 
-        input.click();  //Нажимаем на элемент расположенный по адресу xpath
-
+        input.click();
 
     }
 
