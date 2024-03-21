@@ -41,4 +41,25 @@ public class FirstTest extends WebDriverSettings{
         input.click();  //Нажимаем на элемент расположены по адресу xpath
     }
 
+    @Test
+    public void thriedTest(){
+
+        driver.get("https://github.com/");
+
+        Assert.assertEquals("GitHub: Let’s build from here · GitHub",driver.getTitle());    // Проверка соответствия значения и title
+
+        WebElement input = driver.findElement(By.xpath("//a[@class='HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0']"));
+        input.click();  //Нажимаем на элемент расположены по адресу xpath
+
+        //Селекторы css:
+        //$$("body") - поиск по тэгу
+        //$$("#...") - поиск по id
+        //$$(".class") - поиск по классу
+        //$$("[atribute='main']" - поиск по любому атрибуту
+        //$$("[atribute*='ai']" - поиск по любому атрибуту, частичное вхождение
+        //$$("[atribute^='mai']" - поиск по любому атрибуту, первые буквы слова
+        //$$("[atribute$='ain']" - поиск по любому атрибуту, последние буквы слова
+        //$$("div[role]") - ищет все div в которых есть атрибут role
+        //$$("div:not(...)") - поиск по тегу за исключение атрибутов указанных в скобках
+    }
 }
