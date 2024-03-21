@@ -55,8 +55,11 @@ public class FirstTest extends WebDriverSettings{
 
         WebElement input = driver.findElement(By.xpath("//a[@href='/novoaltaysk/bytovaya_elektronika']"));
 
-        String parameter = input.getAttribute("textContent"); //Получение свойств элемента (Properties)
+        String parameter = input.getAttribute("scrollHeight"); //Получение свойств элемента (Properties)
         System.out.println(parameter);  //Выводим на экран полученное свойство
+
+        String text = input.getText(); //Получение текста в атрибуте
+        System.out.println(text);
 
         input.click();  //Нажимаем на элемент расположены по адресу xpath
 
