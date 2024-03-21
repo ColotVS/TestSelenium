@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,9 +17,14 @@ public class FirstTest extends WebDriverSettings{
         Assert.assertEquals("Публикации / Моя лента / Хабр", driver.getTitle()); // Проверка соответствия значения и title
 
         WebElement input = (new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button [@class='tm-header-user-menu__login btn btn_solid btn_small']"))));//Ожидаем появления элемента на странице, расположенного по адресу xpath.
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='tm-header-user-menu__item tm-header-user-menu__search']"))));//Ожидаем появления элемента на странице, расположенного по адресу xpath.
 
         input.click();  //Нажимаем на элемент расположены по адресу xpath
+
+        input = (new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Поиск']"))));//Ожидаем появления элемента на странице, расположенного по адресу xpath.
+
+        input.sendKeys("Автоматизация тестирования на Java", Keys.ENTER);
 
         //WebElement input = driver.findElement(By.cssSelector());      поиск элемента по cssSelector
 
