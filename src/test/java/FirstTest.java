@@ -50,11 +50,15 @@ public class FirstTest extends WebDriverSettings{
     @Test
     public void thriedTest(){
 
-        driver.get("https://github.com/");
+        driver.get("https://www.avito.ru/");
 
-        Assert.assertEquals("GitHub: Let’s build from here · GitHub",driver.getTitle());    // Проверка соответствия значения и title
+        Assert.assertEquals("Авито: недвижимость, транспорт, работа, услуги, вещи",driver.getTitle());    // Проверка соответствия значения и title
 
-        WebElement input = driver.findElement(By.xpath("//a[@class='HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0']"));
+        WebElement input = driver.findElement(By.xpath("//a[@href='/novoaltaysk/bytovaya_elektronika']"));
+
+        String parameter = input.getAttribute("textContent"); //Получение свойств атрибута (Properties)
+        System.out.println(parameter);  //Выводим на экран полученное свойство
+
         input.click();  //Нажимаем на элемент расположены по адресу xpath
 
         //Селекторы css:
