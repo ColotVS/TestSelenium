@@ -21,6 +21,8 @@ public class FirstTest extends WebDriverSettings{
 
         input.click();  //Нажимаем на элемент расположены по адресу xpath
 
+        //input.clear() // очищает поле ввода
+
         input = (new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Поиск']"))));//Ожидаем появления элемента на странице, расположенного по адресу xpath.
 
